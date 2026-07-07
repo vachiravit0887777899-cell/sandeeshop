@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --void: #14112B;
+    --vault: #1E1A3D;
+    --vault-light: #322C5C;
+    --gold: #E7B24C;
+    --violet: #7C5CFC;
+    --ink: #F3F1FA;
+    --ink-dim: #9C97BE;
+}
+
+body {
+    font-family: 'IBM Plex Sans Thai', 'Figtree', sans-serif;
+    background-color: #F5F4FB;
+}
+
+.font-display {
+    font-family: 'Chakra Petch', 'IBM Plex Sans Thai', sans-serif;
+}
+
+.font-mono-data {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* ลายเซ็นของธีม: เส้นขอบฟอยล์บนการ์ด จะใช้กับการ์ดกล่อง/ไอเทมในขั้นตอนถัดไป */
+.card-foil {
+    position: relative;
+    overflow: hidden;
+}
+.card-foil::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--violet));
+}
+:root {
+    --brand-brown: #9C7B5F;
+    --brand-pink: #F48FB1;
+    --brand-sky: #90CAF9;
+    --brand-sun: #F6C453;
+}
+
+.floaty {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.55;
+    animation: float-bob 6s ease-in-out infinite;
+    pointer-events: none;
+}
+@keyframes float-bob {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-18px) rotate(8deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .floaty { animation: none; }
+}
