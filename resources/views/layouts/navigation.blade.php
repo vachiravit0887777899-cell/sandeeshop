@@ -4,9 +4,8 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center gap-2">
-                    <a href="{{ route('dashboard') }}" class="flex items-center gap-2">
-    <span class="text-2xl">🎁</span>
-    <span class="font-display font-bold text-lg tracking-wide text-[var(--ink)]">SANDEE<span class="text-[var(--gold)]">SHOP</span></span>
+                    <a href="{{ route('dashboard') }}" class="flex items-center">
+    <img src="{{ asset('images/logo.png') }}" alt="Sandee Shop" class="h-12 w-auto">
 </a>
                 </div>
 

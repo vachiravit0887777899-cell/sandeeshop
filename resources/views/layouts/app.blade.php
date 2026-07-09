@@ -13,6 +13,7 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
     </head>
     <body class="antialiased">
        <div class="min-h-screen bg-[#F5F4FB]">

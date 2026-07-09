@@ -8,6 +8,7 @@
     <title>{{ config('app.name', 'Sandee Shop') }}</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 </head>
 <body class="antialiased">
     <div class="min-h-screen relative overflow-hidden flex flex-col sm:justify-center items-center pt-6 sm:pt-0"

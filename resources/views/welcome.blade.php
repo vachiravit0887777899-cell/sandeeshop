@@ -5,20 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'Sandee Shop') }} — ร้านกล่องสุ่มของสะสม</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 </head>
 <body class="antialiased" style="background:#F5F4FB;">
 
     <!-- Header -->
     <header class="sticky top-0 z-40" style="background: var(--void); border-bottom: 1px solid rgba(231,178,76,0.2);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="{{ route('home') }}" class="flex items-center gap-2">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E7B24C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 12v9H4v-9M2 7h20v5H2V7z"/>
-                    <path d="M12 22V7M12 7C10.5 7 9 5.5 9 4a2 2 0 0 1 4-.5"/>
-                    <path d="M12 7c1.5 0 3-1.5 3-3a2 2 0 0 0-4-.5"/>
-                </svg>
-                <span class="font-display font-bold text-lg tracking-wide" style="color: var(--ink);">SANDEE<span style="color: var(--gold);">SHOP</span></span>
-            </a>
+            <a href="{{ route('home') }}" class="flex items-center">
+    <img src="{{ asset('images/logo.png') }}" alt="Sandee Shop" class="h-12 w-auto">
+</a>
 
             <nav class="flex items-center gap-3 sm:gap-6">
     @auth
@@ -115,12 +111,9 @@
     <!-- Footer -->
     <footer class="mt-8" style="background: var(--void);">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div class="flex items-center gap-2">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E7B24C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 12v9H4v-9M2 7h20v5H2V7z"/>
-                </svg>
-                <span class="font-display font-bold text-sm" style="color: var(--ink);">SANDEE<span style="color: var(--gold);">SHOP</span></span>
-            </div>
+            <div class="flex items-center">
+    <img src="{{ asset('images/logo.png') }}" alt="Sandee Shop" class="h-8 w-auto">
+</div>
             <p class="text-xs" style="color: var(--ink-dim);">© {{ date('Y') }} Sandee Shop. All rights reserved.</p>
         </div>
     </footer>
