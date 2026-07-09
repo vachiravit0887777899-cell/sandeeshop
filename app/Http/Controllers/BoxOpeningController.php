@@ -23,7 +23,7 @@ class BoxOpeningController extends Controller
                 'item' => [
                     'id' => $result['box_item']->id,
                     'name' => $result['box_item']->name,
-                    'image' => $result['box_item']->image ? asset('storage/' . $result['box_item']->image) : null,
+                    'image' => $result['box_item']->image ? image_url($result['box_item']->image) : null,
                     'rarity' => $result['box_item']->rarity,
                     'market_value' => $result['box_item']->market_value,
                 ],

@@ -18,7 +18,7 @@
                    <div class="card-foil bg-white rounded-lg shadow-sm border border-[var(--vault-light)]/10 p-4 text-center">
                         <div class="aspect-square bg-gray-100 rounded mb-3 overflow-hidden">
                             @if ($inventory->boxItem->image)
-                                <img src="{{ Storage::url($inventory->boxItem->image) }}" class="w-full h-full object-cover">
+                                <img src="{{ image_url($inventory->boxItem->image) }}" class="w-full h-full object-cover">
                             @else
                                 <div class="w-full h-full flex items-center justify-center text-gray-400 text-xs">ไม่มีรูป</div>
                             @endif

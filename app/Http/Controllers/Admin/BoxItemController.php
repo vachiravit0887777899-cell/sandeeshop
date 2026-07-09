@@ -43,8 +43,8 @@ class BoxItemController extends Controller
         }
 
         if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('box_items', 'public');
-        }
+    $validated['image'] = \App\Services\CloudinaryUploadService::upload($request->file('image'), 'box_items');
+}
 
         $box->items()->create($validated);
 

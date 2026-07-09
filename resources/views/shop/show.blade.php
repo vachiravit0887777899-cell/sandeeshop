@@ -11,7 +11,7 @@
                     <!-- รูปกล่อง -->
                     <div id="box-visual" class="aspect-square bg-gray-100 rounded-lg overflow-hidden relative">
                         @if ($box->image)
-                            <img src="{{ Storage::url($box->image) }}" class="w-full h-full object-cover">
+                            <img src="{{ image_url($box->image) }}" class="w-full h-full object-cover">
                         @else
                             <div class="w-full h-full flex items-center justify-center text-gray-400">ไม่มีรูป</div>
                         @endif
@@ -50,11 +50,11 @@
                         @foreach ($box->items as $item)
                             <div class="card-foil border rounded-lg p-3 text-center" data-item-strip
                                  data-name="{{ $item->name }}"
-                                 data-image="{{ $item->image ? asset('storage/'.$item->image) : '' }}"
+                                 data-image="{{ $item->image ? image_url($item->image) : '' }}"
                                  data-rarity="{{ $item->rarity }}">
                                 <div class="aspect-square bg-gray-100 rounded mb-2 overflow-hidden">
                                     @if ($item->image)
-                                        <img src="{{ Storage::url($item->image) }}" class="w-full h-full object-cover">
+                                        <img src="{{ image_url($item->image) }}" class="w-full h-full object-cover">
                                     @else
                                         <div class="w-full h-full flex items-center justify-center text-gray-400 text-xs">ไม่มีรูป</div>
                                     @endif

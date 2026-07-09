@@ -19,7 +19,7 @@
                     <div class="mb-4">
                         <label class="block font-medium mb-1">รูปภาพ</label>
                         @if ($category->image)
-                            <img src="{{ Storage::url($category->image) }}" class="w-20 h-20 object-cover rounded mb-2">
+                            <img src="{{ image_url($category->image) }}" class="w-20 h-20 object-cover rounded mb-2">
                         @endif
                         <input type="file" name="image" class="w-full">
                         @error('image') <p class="text-red-600 text-sm">{{ $message }}</p> @enderror

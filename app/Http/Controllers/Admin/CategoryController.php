@@ -30,8 +30,8 @@ class CategoryController extends Controller
         $validated['slug'] = Str::slug($validated['name']);
 
         if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('categories', 'public');
-        }
+    $validated['image'] = \App\Services\CloudinaryUploadService::upload($request->file('image'), 'categories');
+}
 
         Category::create($validated);
 

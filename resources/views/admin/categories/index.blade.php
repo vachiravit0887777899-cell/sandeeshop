@@ -31,7 +31,7 @@
                             <tr class="border-b">
                                 <td class="p-2">
                                     @if ($category->image)
-                                        <img src="{{ Storage::url($category->image) }}" class="w-12 h-12 object-cover rounded">
+                                        <img src="{{ image_url($category->image) }}" class="w-12 h-12 object-cover rounded">
                                     @else
                                         <span class="text-gray-400">ไม่มีรูป</span>
                                     @endif

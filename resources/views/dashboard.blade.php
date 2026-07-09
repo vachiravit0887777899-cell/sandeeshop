@@ -60,7 +60,7 @@
                                 <div class="text-center">
                                     <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden mb-1">
                                         @if ($inventory->boxItem->image)
-                                            <img src="{{ Storage::url($inventory->boxItem->image) }}" class="w-full h-full object-cover">
+                                            <img src="{{ image_url($inventory->boxItem->image) }}" class="w-full h-full object-cover">
                                         @else
                                             <div class="w-full h-full flex items-center justify-center text-gray-400 text-xs">ไม่มีรูป</div>
                                         @endif

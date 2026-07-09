@@ -49,7 +49,7 @@
                             <tr class="border-b">
                                 <td class="p-2">
                                     @if ($item->image)
-                                        <img src="{{ Storage::url($item->image) }}" class="w-12 h-12 object-cover rounded">
+                                        <img src="{{ image_url($item->image) }}" class="w-12 h-12 object-cover rounded">
                                     @else
                                         <span class="text-gray-400">ไม่มีรูป</span>
                                     @endif

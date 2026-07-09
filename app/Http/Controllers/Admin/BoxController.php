@@ -37,8 +37,8 @@ class BoxController extends Controller
         $validated['slug'] = Str::slug($validated['name']) . '-' . uniqid();
 
         if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('boxes', 'public');
-        }
+    $validated['image'] = \App\Services\CloudinaryUploadService::upload($request->file('image'), 'boxes');
+}
 
         Box::create($validated);
 
