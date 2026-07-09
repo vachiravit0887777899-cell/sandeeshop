@@ -26,7 +26,7 @@
                     <a href="{{ route('shop.show', $box) }}" class="card-foil group bg-white rounded-xl shadow-sm hover:shadow-xl border border-[var(--vault-light)]/10 transition overflow-hidden">
                         <div class="aspect-square bg-gray-100">
                             @if ($box->image)
-                                <img src="{{ Storage::url($box->image) }}" class="w-full h-full object-cover">
+                                <img src="{{ image_url($box->image) }}" class="w-full h-full object-cover">
                             @else
                                 <div class="w-full h-full flex items-center justify-center text-gray-400">ไม่มีรูป</div>
                             @endif
